@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE_APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d{YYYY:MM:dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M\(%line\) - %msg %n
+            </Pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+            <!--<level>TRACE</level>-->
+        </filter>
+    </appender>
+
+    <appender name="DEBUG_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>log_daily/base_api_debug.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 90 days' worth of history -->
+            <maxHistory>90</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{YYYY:MM:dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M\(%line\) - %msg %n
+            </Pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <appender name="ERROR_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>log_daily/base_api_error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 90 days' worth of history -->
+            <maxHistory>90</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{YYYY:MM:dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M\(%line\) - %msg %n
+            </Pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <root level="INFO" >
+        <appender-ref ref="ERROR_APPENDER" />
+        <appender-ref ref="CONSOLE_APPENDER" />
+        <appender-ref ref="DEBUG_APPENDER" />
+    </root>
+
+    <logger name="org.hibernate.SQL" level="trace" additivity="false">
+        <appender-ref ref="CONSOLE_APPENDER" />
+    </logger>
+
+    <logger name="org.hibernate.type.descriptor.sql" level="trace">
+        <appender-ref ref="CONSOLE_APPENDER" />
+    </logger>
+
+</configuration>

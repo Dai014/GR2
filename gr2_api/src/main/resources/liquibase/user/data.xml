@@ -1,0 +1,20 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="insert_user" author="dainv">
+		<insert tableName="user">
+			<column name="username" value="rabiloo"/>
+			<column name="password"
+					value="$2a$10$2MOcEFL8Sa/0he2p5WYE9e.ALeL5MyPaNGNLP/2F2Eg.Q4w9cFr5y"/> <!-- rabiloo@123 -->
+			<column name="default_password" value="rabiloo@123"/>
+			<column name="name" value="SYSTEM ADMIN"/>
+			<column name="role" value="ROLE_SYSTEM_ADMIN"/>
+			<column name="is_change_password" valueBoolean="true"/>
+			<column name="created_by_user_id" value="1"/>
+			<column name="updated_by_user_id" value="1"/>
+		</insert>
+    </changeSet>
+
+</databaseChangeLog>
