@@ -5,9 +5,9 @@
 
     <changeSet id="insert_user" author="dainv">
 		<insert tableName="user">
-			<column name="username" value="rabiloo"/>
+			<column name="username" value="dainv"/>
 			<column name="password"
-					value="$2a$10$2MOcEFL8Sa/0he2p5WYE9e.ALeL5MyPaNGNLP/2F2Eg.Q4w9cFr5y"/> <!-- rabiloo@123 -->
+					value="$2a$10$csqCEGljHsSrf2qq8SlyYuRcoWslBT/XB2BnRE9AJYAuBjD3wGUWa"/> <!-- dainv -->
 			<column name="default_password" value="rabiloo@123"/>
 			<column name="name" value="SYSTEM ADMIN"/>
 			<column name="role" value="ROLE_SYSTEM_ADMIN"/>

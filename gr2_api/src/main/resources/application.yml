@@ -1,7 +1,7 @@
 # spring
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/base_api?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Tokyo&useSSL=false
+    url: jdbc:mysql://localhost:3306/gr2_api?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Tokyo&useSSL=false
     username: rabiloo
     password: rabiloo
     hiraki:
