@@ -12,6 +12,7 @@
       + mở setting <img width="1130" alt="Screen Shot 2022-11-27 at 5 44 58 PM" src="https://user-images.githubusercontent.com/66270677/204131145-ee0db906-cd3c-4ad6-9fed-422642be72b8.png">
 3. Chạy project 
   - sau khi hoàn thành các bước, giao diện có nút run sáng lên là hoàn thành ![image](https://user-images.githubusercontent.com/66270677/204131835-cdb3d70a-6b34-449a-b6d3-2642be2639b7.png)
+  - Đăng nhập swagger: http://localhost:8080/swagger-ui.html với username: dainv, password: dainv
 
     
 
